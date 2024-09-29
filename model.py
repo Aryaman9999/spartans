@@ -1,3 +1,14 @@
+
+## I was not able to run it on my laptop as even training with just 20k pictures (10k)each 
+## class took too much time and failed again and again.
+## I was able to run 1 epoch with 98.19% accracy but then it crashed most probobly due to 
+## laptop's hardware capabilities.
+## please try to run it once
+
+
+
+
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -74,7 +85,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
 
 # Training Function
-def train_model(model, criterion, optimizer, train_loader, epochs=1):
+def train_model(model, criterion, optimizer, train_loader, epochs=5):
     for epoch in range(epochs):
         model.train()
         running_loss = 0.0
